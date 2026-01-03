@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY WORLD – CSE R23 Semesters</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", system-ui, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, rgba(59,130,246,0.45), transparent 55%),
+                radial-gradient(circle at bottom, rgba(16,185,129,0.6), transparent 55%),
+                #020617;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            color: #e5e7eb;
+        }
+        .shell {
+            width: min(720px, 100%);
+            background: rgba(15,23,42,0.96);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(148,163,184,0.35);
+            box-shadow: 0 24px 60px rgba(15,23,42,0.95);
+            padding: 1.8rem 2rem 2rem;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.6rem;
+        }
+        .title-block h1 {
+            font-size: 1.35rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .title-block p {
+            font-size: 0.82rem;
+            color: #9ca3af;
+        }
+        .pill {
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            background: rgba(59,130,246,0.18);
+            border: 1px solid rgba(59,130,246,0.7);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #bfdbfe;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        .card {
+            position: relative;
+            border-radius: 1rem;
+            padding: 1rem 1.1rem;
+            background: radial-gradient(circle at top left, rgba(37,99,235,0.32), rgba(15,23,42,0.98));
+            border: 1px solid rgba(148,163,184,0.4);
+            box-shadow: 0 14px 32px rgba(15,23,42,0.9);
+            overflow: hidden;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(45,212,191,0.22), transparent 55%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .card-inner {
+            position: relative;
+            z-index: 1;
+        }
+        .sem-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #a5b4fc;
+            margin-bottom: 0.25rem;
+        }
+        .sem-title {
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
+        }
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #38bdf8, #22c55e);
+            color: #0b1120;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            box-shadow: 0 10px 22px rgba(34,197,94,0.65);
+            transition: transform 0.12s ease, box-shadow 0.16s ease, filter 0.14s ease;
+        }
+        .card a:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.08);
+            box-shadow: 0 14px 30px rgba(34,197,94,0.85);
+        }
+        .card a:active {
+            transform: translateY(1px) scale(0.99);
+            box-shadow: 0 8px 18px rgba(15,23,42,0.9);
+        }
+        .foot-note {
+            margin-top: 1.4rem;
+            font-size: 0.76rem;
+            color: #9ca3af;
+            text-align: right;
+        }
+        @media (max-width: 640px) {
+            .shell {
+                padding: 1.5rem 1.3rem 1.6rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .foot-note {
+                text-align: left;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <div class="header">
+            <div class="title-block">
+                <h1>Computer Science and Engineering – Semesters</h1>
+                <p>Select a semester to view complete subject materials.</p>
+            </div>
+            <div class="pill">Regulation R23</div>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 1-1</div>
+                    <a href="1-1.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 1-2</div>
+                    <a href="1-2.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 2-1</div>
+                    <a href="2-1.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 2-2</div>
+                    <a href="2-2.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 3-1</div>
+                    <a href="3-1.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 3-2</div>
+                    <a href="3-2.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 4-1</div>
+                    <a href="4-1.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="sem-label">CSE • R23</div>
+                    <div class="sem-title">Semester 4-2</div>
+                    <a href="4-2.html">Open</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot-note">
+            Click a card to open Google Drive materials.
+        </div>
+    </div>
+</body>
+</html>
