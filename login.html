@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EASY WORLD</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source
+            src="https://www.shutterstock.com/shutterstock/video/1108578672/preview/stock-footage-abstract-technology-binary-code-background-random-zero-and-one-digital-code-futuristic-information.webm"
+            type="video/mp4" />
+    </video>
+
+    <div class="container">
+        <div class="logo-title">
+            <img src="log.png" alt="Easy World logo" />
+            <div class="title-text">
+                <h1>EASY WORLD</h1>
+                <p>Smart syllabus navigator </p>
+            </div>
+        </div>
+
+        <form method="post" action="" name="contact-form" id="contact-form">
+            <h4>Student Information</h4>
+
+            <input type="text" name="Your-Name" placeholder="Your full name" required />
+            <input type="text" name="College-Name" placeholder="College name" required />
+
+            <select name="Regulation" id="reg" required>
+                <option value="" disabled selected>Select your regulation</option>
+                <option value="R23">R23 Regulation</option>
+                <option value="R20">R20 Regulation</option>
+            </select>
+
+            <input type="submit" value="Continue" id="submit" />
+        </form>
+
+        <p class="login-note">Tip: choose the correct regulation to open your branch dashboard.</p>
+    </div>
+
+    <!-- Success audio -->
+    <audio id="successSound" src="sound.wav" preload="auto"></audio>
+
+    <!-- Loading Popup -->
+    <div id="loading" class="loading-popup" style="display: none;">
+        <div class="spinner"></div>
+        <p>Submitting your details…</p>
+    </div>
+
+    <!-- Animated SUCCESS Popup -->
+    <div id="customPopup" class="popup-overlay">
+        <div class="popup-box">
+            <div class="success-icon">
+                <div class="icon-circle">
+                    <span class="checkmark">✓</span>
+                </div>
+            </div>
+            <h3>Login Successful</h3>
+            <p>You’re ready to explore your EASY WORLD dashboard.</p>
+            <button class="close-btn" id="popupClose">Go to dashboard</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

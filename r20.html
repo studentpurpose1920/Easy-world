@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY WORLD – R20 Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", system-ui, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, rgba(59,130,246,0.45), transparent 55%),
+                        radial-gradient(circle at bottom, rgba(16,185,129,0.6), transparent 55%),
+                        #020617;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e5e7eb;
+            padding: 1.5rem;
+        }
+        .dashboard {
+            width: min(960px, 100%);
+            background: rgba(15,23,42,0.92);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(148,163,184,0.3);
+            box-shadow: 0 24px 60px rgba(15,23,42,0.9);
+            padding: 1.8rem 2rem 2rem;
+        }
+        .dash-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.6rem;
+        }
+        .dash-title h1 {
+            font-size: 1.4rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .dash-title p {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+        .reg-pill {
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            background: rgba(34,197,94,0.16);
+            border: 1px solid rgba(34,197,94,0.6);
+            font-size: 0.78rem;
+            color: #bbf7d0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1.2rem;
+        }
+        .card {
+            position: relative;
+            padding: 1.1rem 1.1rem 1rem;
+            border-radius: 1.1rem;
+            background: radial-gradient(circle at top left, rgba(37,99,235,0.3), rgba(15,23,42,0.98));
+            border: 1px solid rgba(148,163,184,0.35);
+            box-shadow: 0 12px 26px rgba(15,23,42,0.85);
+            overflow: hidden;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(45,212,191,0.24), transparent 55%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+        .branch-tag {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #a5b4fc;
+            margin-bottom: 0.25rem;
+        }
+        .branch-name {
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+        }
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #22c55e, #06b6d4);
+            color: #0b1120;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            box-shadow: 0 10px 22px rgba(34,197,94,0.6);
+            transition: transform 0.12s ease, box-shadow 0.16s ease, filter 0.14s ease;
+        }
+        .card a:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.08);
+            box-shadow: 0 14px 30px rgba(34,197,94,0.8);
+        }
+        .card a:active {
+            transform: translateY(1px) scale(0.99);
+            box-shadow: 0 8px 18px rgba(15,23,42,0.9);
+        }
+        .footer-note {
+            margin-top: 1.4rem;
+            font-size: 0.75rem;
+            color: #9ca3af;
+            text-align: right;
+        }
+        @media (max-width: 640px) {
+            .dashboard {
+                padding: 1.4rem 1.2rem 1.6rem;
+            }
+            .dash-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer-note {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dash-header">
+            <div class="dash-title">
+                <h1>Easy World – R20 Dashboard</h1>
+                <p>Select your branch to view semesters &amp; syllabi.</p>
+            </div>
+            <div class="reg-pill">Regulation R20</div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="branch-tag">CSE</div>
+                    <div class="branch-name">Computer Science and Engineering</div>
+                    <a href="R20\CSE\cse-semisters.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="branch-tag">AIML</div>
+                    <div class="branch-name">Artificial Intelligence &amp; Machine Learning</div>
+                    <a href="R20\AIML\aiml-semisters.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="branch-tag">ECE</div>
+                    <div class="branch-name">Electronics and Communication Engineering</div>
+                    <a href="R20\ECE\ece-semisters.html">Open</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="branch-tag">EEE</div>
+                    <div class="branch-name">Electrical and Electronics Engineering</div>
+                    <a href="R20\EEE\eee-semisters.html">Open</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Tip: use the browser back button to switch regulation.
+        </div>
+    </div>
+</body>
+</html>

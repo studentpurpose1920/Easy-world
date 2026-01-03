@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY WORLD</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <img class="logo" src="logo.png" alt="Logo">
+            <img class="name" src="Logo Name.png" alt="Name">
+            <div class="menu" onclick="toggleMenu()">☰</div>
+            <nav class="navbar" id="navbar">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#about">About</a>
+                <a href="login.html" style="background:#ff2e46; padding:8px 14px; border-radius:6px;">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 id="typing-text"></h1>
+            <p id="typing-para"></p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About EASY WORLD</h2>
+        <p>EASY WORLD is a digital learning hub where students can access resources, explore courses, and track their
+            academic journey seamlessly. Whether you’re in R20 or R23 regulation, we provide tailored learning support.
+        </p>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="feature">
+            <h3>📚 Easy Access</h3>
+            <p>All resources are just a click away – anytime, anywhere.</p>
+        </div>
+        <div class="feature">
+            <h3>⚡ Fast Navigation</h3>
+            <p>Seamlessly move between courses and regulations.</p>
+        </div>
+        <div class="feature">
+            <h3>🌍 Modern Design</h3>
+            <p>A clean, responsive design that looks great on all devices.</p>
+        </div>
+        <div class="feature">
+            <h3>🎯 Student Focused</h3>
+            <p>Built to enhance your academic journey with minimal distractions.</p>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="courses" id="courses">
+        <h2>Popular Courses</h2>
+        <div class="course" onclick="window.location.href='login.html?course=CSE'">
+            <h3>CSE</h3>
+            <p>Explore Computer Science courses and projects.</p>
+        </div>
+
+        <div class="course" onclick="window.location.href='login.html?course=AIML'">
+            <h3>AIML</h3>
+            <p>Artificial Intelligence & Machine Learning resources.</p>
+        </div>
+
+        <div class="course" onclick="window.location.href='login.html?course=ECE'">
+            <h3>ECE</h3>
+            <p>Electronics and Communication Engineering modules.</p>
+        </div>
+
+        <div class="course" onclick="window.location.href='login.html?course=EEE'">
+            <h3>EEE</h3>
+            <p>Electrical and Electronics Engineering learning path.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials with marquee -->
+    <section class="testimonials" id="testimonials">
+        <h2>Our Professionals</h2>
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="card">
+                    <img src="Siva.png" alt="Siva">
+                    <h4>Siva</h4>
+                </div>
+                <div class="card">
+                    <img src="Venu.png" alt="Venu">
+                    <h4>Venu</h4>
+                </div>
+                <div class="card">
+                    <img src="Bhargavi.png" alt="Bhargavi">
+                    <h4>Bhargavi</h4>
+                </div>
+
+                <!-- duplicate for smooth loop -->
+                <div class="card">
+                    <img src="Siva.png" alt="Siva">
+                    <h4>Siva</h4>
+                </div>
+                <div class="card">
+                    <img src="Venu.png" alt="Venu">
+                    <h4>Venu</h4>
+                </div>
+                <div class="card">
+                    <img src="Bhargavi.png" alt="Bhargavi">
+                    <h4>Bhargavi</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 EASY WORLD | All Rights Reserved</p>
+        <p>
+            <a href="#about">About</a> |
+            <a href="#features">Features</a> |
+            <a href="#courses">Courses</a> |
+            <a href="#testimonials">Testimonials</a> |
+            <a href="login.html">Login</a>
+        </p>
+
+        <section class="contact-section">
+            <h3>Contact Us</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="college" placeholder="College Name" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" id="sendBtn">
+                    <span id="btnText">Send</span>
+                    <span class="spinner" id="spinner"></span>
+                </button>
+            </form>
+            <p id="response"></p>
+        </section>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

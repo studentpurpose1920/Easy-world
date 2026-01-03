@@ -1,0 +1,398 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Fullscreen layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #020617;
+    color: #e5e7eb;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background video */
+#bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark gradient overlay on top of video */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.55), transparent 55%),
+        radial-gradient(circle at bottom, rgba(16, 185, 129, 0.55), transparent 55%),
+        rgba(15, 23, 42, 0.92);
+    z-index: -1;
+}
+
+/* Main glassmorphism card */
+.container {
+    width: min(420px, 92vw);
+    padding: 2.4rem 2.6rem 2.2rem;
+    border-radius: 1.6rem;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.74));
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow:
+        0 24px 60px rgba(15, 23, 42, 0.85),
+        0 0 0 1px rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+/* App title / logo row */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.6rem;
+}
+
+.logo-title img {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4);
+}
+
+.logo-title img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* keep design visible */
+    /* background: #ca070710; */
+    /* slight circle background */
+    padding: 0rem;
+    /* makes it look centered */
+    object-position: center;
+    box-shadow: 0 0 0 2px rgb(46, 239, 229);
+
+}
+
+
+
+.title-text h1 {
+    font-size: 1.45rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e5e7eb;
+}
+
+.title-text p {
+    font-size: 0.78rem;
+    color: #9ca3af;
+}
+
+/* Form */
+form h4 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #f9fafb;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* Input + select base */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.36), rgba(15, 23, 42, 0.96));
+    color: #e5e7eb;
+    outline: none;
+    font-size: 0.88rem;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
+}
+
+input[type="text"],
+select option {
+    color: #ffffff;
+
+
+}
+
+select option {
+    color: black;
+    background-color: #ffffff;
+}
+
+input::placeholder {
+    color: #9ca3af;
+    font-size: 0.83rem;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4), 0 0 20px rgba(56, 189, 248, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Submit button */
+#submit {
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    color: #0b1120;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    box-shadow:
+        0 14px 30px rgba(34, 197, 94, 0.48),
+        0 0 0 1px rgba(15, 23, 42, 0.7);
+    transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.14s ease;
+}
+
+#submit:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow:
+        0 18px 38px rgba(34, 197, 94, 0.65),
+        0 0 0 1px rgba(15, 23, 42, 0.7);
+}
+
+#submit:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow:
+        0 9px 20px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.9);
+}
+
+/* Small helper note */
+.login-note {
+    margin-top: 0.75rem;
+    font-size: 0.72rem;
+    color: #9ca3af;
+}
+
+/* ===== Loading Popup ===== */
+.loading-popup {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(15, 118, 110, 0.12), rgba(15, 23, 42, 0.96));
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 40;
+    color: #e5e7eb;
+}
+
+.loading-popup p {
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+/* Spinner */
+.spinner {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(148, 163, 184, 0.2);
+    border-top-color: #22c55e;
+    border-right-color: #06b6d4;
+    animation: spin 0.9s linear infinite;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+/* ===== SUCCESS POPUP ===== */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.popup-box {
+    width: min(360px, 92vw);
+    padding: 2rem 2.4rem 1.9rem;
+    border-radius: 1.6rem;
+    background: radial-gradient(circle at top, rgba(34, 197, 94, 0.18), rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(52, 211, 153, 0.4);
+    box-shadow:
+        0 28px 60px rgba(15, 23, 42, 0.95),
+        0 0 45px rgba(45, 212, 191, 0.35);
+    text-align: center;
+    animation: popupFade 0.3s ease-out;
+}
+
+/* Animated icon */
+.success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.icon-circle {
+    width: 82px;
+    height: 82px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 0%, #bbf7d0, #22c55e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 0 3px rgba(74, 222, 128, 0.4),
+        0 0 35px rgba(34, 197, 94, 0.7);
+    animation: pulseGlow 1.3s ease-out infinite;
+}
+
+.checkmark {
+    font-size: 2.4rem;
+    color: #022c22;
+    transform-origin: center;
+    animation: popIn 0.6s ease-out;
+}
+
+.popup-box h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+    color: #e5e7eb;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.popup-box p {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+    margin-bottom: 1.2rem;
+}
+
+/* OK button inside popup */
+.close-btn {
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #22c55e, #06b6d4);
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 14px 30px rgba(34, 197, 94, 0.55);
+    transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.15s ease;
+    min-width: 150px;
+}
+
+.close-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+    box-shadow: 0 18px 40px rgba(34, 197, 94, 0.75);
+}
+
+.close-btn:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 9px 24px rgba(15, 23, 42, 0.9);
+}
+
+/* ===== Animations ===== */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popupFade {
+    from {
+        transform: translateY(12px) scale(0.94);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        transform: scale(0.96);
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0.55),
+            0 0 30px rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        transform: scale(1.03);
+        box-shadow:
+            0 0 0 12px rgba(34, 197, 94, 0),
+            0 0 40px rgba(34, 197, 94, 0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0),
+            0 0 32px rgba(34, 197, 94, 0.8);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.2) rotate(-10deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.15) rotate(4deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.8rem 1.6rem 1.7rem;
+        border-radius: 1.2rem;
+    }
+
+    .popup-box {
+        padding: 1.8rem 1.7rem 1.6rem;
+        border-radius: 1.3rem;
+    }
+}
