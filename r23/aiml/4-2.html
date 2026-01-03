@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY WORLD – AIML 4-2 Subjects</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", system-ui, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, rgba(59,130,246,0.45), transparent 55%),
+                radial-gradient(circle at bottom, rgba(16,185,129,0.6), transparent 55%),
+                #020617;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            color: #e5e7eb;
+        }
+        .shell {
+            width: min(900px, 100%);
+            background: rgba(15,23,42,0.96);
+            border-radius: 1.5rem;
+            border: 1px solid rgba(148,163,184,0.35);
+            box-shadow: 0 24px 60px rgba(15,23,42,0.95);
+            padding: 1.8rem 2rem 2rem;
+        }
+        .header {
+            margin-bottom: 1.4rem;
+        }
+        .sub-pill {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #a5b4fc;
+            margin-bottom: 0.35rem;
+        }
+        .header h1 {
+            font-size: 1.35rem;
+            margin-bottom: 0.35rem;
+        }
+        .header p {
+            font-size: 0.82rem;
+            color: #9ca3af;
+        }
+        .subjects {
+            margin-top: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .subject-item a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            text-decoration: none;
+            padding: 0.75rem 0.95rem;
+            border-radius: 0.9rem;
+            background: radial-gradient(circle at top left, rgba(37,99,235,0.32), rgba(15,23,42,0.98));
+            border: 1px solid rgba(148,163,184,0.4);
+            box-shadow: 0 12px 28px rgba(15,23,42,0.9);
+            color: #e5e7eb;
+            font-size: 0.9rem;
+            transition: transform 0.12s ease, box-shadow 0.16s ease, filter 0.14s ease;
+        }
+        .subject-item a span {
+            flex: 1;
+        }
+        .subject-item a .arrow {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .subject-item a:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.05);
+            box-shadow: 0 16px 34px rgba(15,23,42,0.95);
+        }
+        .subject-item a:active {
+            transform: translateY(1px) scale(0.99);
+            box-shadow: 0 9px 24px rgba(15,23,42,1);
+        }
+        .foot-note {
+            margin-top: 1.3rem;
+            font-size: 0.76rem;
+            color: #9ca3af;
+            text-align: right;
+        }
+        @media (max-width: 640px) {
+            .shell {
+                padding: 1.5rem 1.25rem 1.6rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <div class="header">
+            <div class="sub-pill">AIML • R23 • 4-2</div>
+            <h1>Artificial Intelligence & Machine Learning – Semester 4-2</h1>
+            <p>Click a subject to open the shared materials in Google Drive.</p>
+        </div>
+
+        <div class="subjects">
+            
+            <div class="subject-item">
+                <a href="https://drive.google.com/drive/folders/1z8kTg9gHBjXP-zRUUJUP2cpokYNnXVkJ?usp=sharing">
+                    <span>New folder</span>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+
+            <div class="subject-item">
+                <a href="https://drive.google.com/drive/folders/1dkB1Z7rcxIpvuTXVbP2meN6aKgST8Lvu?usp=sharing">
+                    <span>New folder (2)</span>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+
+            <div class="subject-item">
+                <a href="https://drive.google.com/drive/folders/1RV3I3lOkSAWqk0BDflL2qiVg2YgINzJt?usp=sharing">
+                    <span>New folder (3)</span>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+
+            <div class="subject-item">
+                <a href="https://drive.google.com/drive/folders/1Rhz190VG-T48sQQ69Bp6FsuiQ9KEaTut?usp=sharing">
+                    <span>New folder (4)</span>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+
+            <div class="subject-item">
+                <a href="https://drive.google.com/drive/folders/1yB2ONvxUvGIzbbFEANjkZlgb3oiArWHC?usp=sharing">
+                    <span>New folder (5)</span>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="foot-note">
+            Note: Links will open in a new tab on most browsers.
+        </div>
+    </div>
+</body>
+</html>
